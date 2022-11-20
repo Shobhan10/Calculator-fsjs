@@ -1,21 +1,18 @@
-// const buttons = document.querySelectorAll(".button");
-// // console.log(buttons);
-// for (let i = 0; i < buttons.length; i++) {
-//   buttons[i].addEventListener("click", () => {
-//     console.log(buttons[i].value);
-//   });
-// }
-
-// const b = document.getElementById("b");
-// console.log(b);
-
 function insert(num) {
-  console.log(num)
   const show = document.querySelector(".textview");
   show.value += num
 }
 
-function equals() {}
+function equals() {
+  const show = document.querySelector(".textview");
+  try {
+    val = eval(show.value);
+    show.value = val;
+  } catch (error) {
+    console.log(error);
+    alert("Please put the values correctly");
+  }
+}
 
 function clean() {
   const show = document.querySelector(".textview");
